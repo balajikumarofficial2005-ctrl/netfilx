@@ -1,0 +1,24 @@
+{
+  "name": "netflix-login-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c red,cyan \"node --watch server/index.js\" \"vite --host 127.0.0.1\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test server/auth.test.js"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router-dom": "7.18.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "concurrently": "10.0.5",
+    "vite": "8.3.0"
+  }
+}
